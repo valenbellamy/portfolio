@@ -28,9 +28,9 @@ const IndexPage = ({ data }) => {
           <p>
             I am a web developer with 5 years of experience, specialized in
             frontend development. I try to be creative in my work, without
-            forgetting performence and usability. I love working with all the
-            React environment (mainly Gatsby). I can do webdesign, frontend code
-            and backend (NodeJS). Don't hesitate to contact if you're
+            forgetting performance and usability. I love working with all the
+            React environment (mainly Gatsby). I can do webdesign, frontend and
+            backend code (NodeJS). Don't hesitate to contact if you're
             insterested to collaborate !
           </p>
         </div>
