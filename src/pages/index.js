@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -17,7 +17,10 @@ const IndexPage = ({ data }) => {
         <h1>
           Hi, I’m a french developer,<br></br>with a passion for design.
         </h1>
-        <Img fluid={data.img.childImageSharp.fluid} />
+        <Img
+          fluid={data.img.childImageSharp.fluid}
+          alt="Picture of Valentin working"
+        />
       </div>
       <div className="about">
         <h2>ABOUT</h2>
@@ -35,8 +38,23 @@ const IndexPage = ({ data }) => {
       <footer>
         <div>
           Available for work: bellamyvalentin@gmail.com -{" "}
-          <Link to="https://codepen.io/Valou">Codepen</Link> -{" "}
-          <Link to="https://twitter.com/BellamyValentin">Twitter</Link>
+          <a
+            href="https://codepen.io/Valou"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Link to my codepen"
+          >
+            Codepen
+          </a>{" "}
+          -{" "}
+          <a
+            href="https://twitter.com/BellamyValentin"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Link to my Twitter"
+          >
+            Twitter
+          </a>
         </div>
       </footer>
     </Layout>
