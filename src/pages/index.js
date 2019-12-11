@@ -1,16 +1,58 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <span>WELCOME</span>
-    <h1>I'm a french frontend developer, working on his portfolio !</h1>
-  </Layout>
-)
+import "../components/styles/intro.scss"
+import "../components/styles/footer.scss"
+
+const IndexPage = ({ data }) => {
+  return (
+    <Layout>
+      <SEO title="Valentin Bellamy, freelance frontend developer" />
+      <div className="intro">
+        <h1>
+          Hi, I’m a french developer,<br></br>with a passion for design.
+        </h1>
+        <Img fluid={data.img.childImageSharp.fluid} />
+      </div>
+      <div className="about">
+        <h2>ABOUT</h2>
+        <div>
+          <p>
+            I am a web developer with 5 years of experience, specialized in
+            frontend development. I try to be creative in my work, without
+            forgetting performence and usability. I love working with all the
+            React environment (mainly Gatsby). I can do webdesign, frontend code
+            and backend (NodeJS). Don't hesitate to contact if you're
+            insterested to collaborate !
+          </p>
+        </div>
+      </div>
+      <footer>
+        <div>
+          Available for work: bellamyvalentin@gmail.com -{" "}
+          <Link to="https://codepen.io/Valou">Codepen</Link> -{" "}
+          <Link to="https://twitter.com/BellamyValentin">Twitter</Link>
+        </div>
+      </footer>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  {
+    img: file(relativePath: { eq: "photo.JPG" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
