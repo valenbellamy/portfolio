@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
       </div>
       <footer>
         <div>
-          Available for work: bellamyvalentin@gmail.com -{" "}
+          <h2>available for work:</h2> bellamyvalentin@gmail.com -{" "}
           <a
             href="https://codepen.io/Valou"
             target="_blank"

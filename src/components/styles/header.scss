@@ -1,6 +1,9 @@
 header {
-  padding: 0rem 0rem 0rem 30rem;
-  div {
-    font-size: 1.4rem;
+  padding: 0rem;
+  @media (min-width: 576px) {
+    padding: 0rem 0rem 0rem 30rem;
+    div {
+      font-size: 1.4rem;
+    }
   }
 }
