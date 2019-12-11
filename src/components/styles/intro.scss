@@ -1,6 +1,9 @@
 .intro {
   display: block;
   margin-top: 3rem;
+  .gatsby-image-wrapper {
+    width: 100%;
+  }
   @media (min-width: 576px) {
     margin-top: 15vh;
     display: flex;

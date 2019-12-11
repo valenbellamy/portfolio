@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Anim from "../components/anim"
 
 import "../components/styles/intro.scss"
 import "../components/styles/footer.scss"
@@ -13,6 +13,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Valentin Bellamy, freelance frontend developer" />
+      <Anim />
       <div className="intro">
         <h1>
           Hi, I’m a french developer,<br></br>with a passion for design.
