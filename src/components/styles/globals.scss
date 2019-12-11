@@ -9,9 +9,11 @@ html {
 }
 
 body {
+  //background-color: rgba(242, 238, 234, 1);
   background-color: #161616;
   font-family: "Work Sans", sans-serif;
   color: white;
+  //color: #292a2c;
   padding: 3rem;
   position: relative;
   @media (min-width: 576px) {
@@ -58,4 +60,5 @@ p {
 
 a {
   color: white;
+  //color: #292a2c;
 }

@@ -46,7 +46,7 @@ const Anim = () => {
           ref={element => {
             svgRef = element
           }}
-          fill="#ffffff"
+          fill="#f2eeea"
           d="M 10,0 L 10,10 C 10,10 10,10 5,10 C 0,10 0,10 0,10 L 0,0 Z"
         ></path>
       </svg>
