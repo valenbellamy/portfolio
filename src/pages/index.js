@@ -26,13 +26,17 @@ const IndexPage = ({ data }) => {
       <div className="about">
         <h2>ABOUT</h2>
         <div>
-          <p>
+          <p className="mbs">
             I am a web developer with 5 years of experience, specialized in
             frontend development. I try to be creative in my work, without
             forgetting performance and usability. I love working with all the
-            React environment (mainly Gatsby). I can do webdesign, frontend and
-            backend code (NodeJS). Don't hesitate to contact if you're
-            insterested to collaborate !
+            React environment (mainly Gatsby).
+          </p>
+          <p className="mbs">
+            I can do webdesign, frontend and backend code (NodeJS).
+          </p>
+          <p>
+            Don't hesitate to contact if you're insterested to collaborate !
           </p>
         </div>
       </div>
