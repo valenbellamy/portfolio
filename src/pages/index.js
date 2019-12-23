@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
       <Anim />
       <div className="intro">
         <h1>
-          Hi, I’m a french developer,<br></br>with a passion for design.
+          Hi, I’m a french developer,<br></br>available for freelance.
         </h1>
         <Img
           fluid={data.img.childImageSharp.fluid}
