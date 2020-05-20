@@ -15,7 +15,7 @@
 @font-face {
   font-family: InterBold;
   font-style: normal;
-  src: url("Inter-semiBold.woff") format("woff"),
-    url("Inter-semiBold.woff2") format("woff2");
+  src: url("Inter-SemiBold.woff") format("woff"),
+    url("Inter-SemiBold.woff2") format("woff2");
   font-display: swap;
 }
