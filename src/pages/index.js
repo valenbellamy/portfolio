@@ -102,28 +102,28 @@ export const query = graphql`
   {
     img1: file(relativePath: { eq: "photo-1-min.png" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     img2: file(relativePath: { eq: "photo-2-min.png" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     img3: file(relativePath: { eq: "photo-3-min.png" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     img4: file(relativePath: { eq: "photo-5-min.png" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
