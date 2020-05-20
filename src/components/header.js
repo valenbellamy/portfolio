@@ -15,9 +15,9 @@ const Header = () => (
               A propos
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="#">Blog</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
