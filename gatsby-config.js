@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Valentin Bellamy, freelance frontend developer`,
-    description: `I am a french frontend developer, passionate about my work.`,
+    title: `Valentin Bellamy, développeur frontend`,
+    description: `Développeur frontend passionné, précis et réactif !`,
     author: `@BellamyValentin`,
     siteUrl: `https://valentinbellamy.com`,
   },
