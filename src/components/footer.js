@@ -41,11 +41,17 @@ const Footer = () => {
       </div>
       <div className="footer__bottom">
         <ul>
+          {/* <li>
+            <a href="#" target="_blank" rel="noreferrer noopener">Twitter</a>
+          </li> */}
           <li>
-            <a href="#">Twitter</a>
-          </li>
-          <li>
-            <a href="#">Codepen</a>
+            <a
+              href="https://codepen.io/Valou"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Codepen
+            </a>
           </li>
         </ul>
         <span>Tous droits réservés © Valentin Bellamy 2020</span>
