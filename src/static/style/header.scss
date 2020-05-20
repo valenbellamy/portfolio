@@ -1,0 +1,31 @@
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+    @media (min-width: 767.98px) {
+      padding: 3rem 0rem;
+    }
+    a {
+      font-size: $main-size;
+      &.--active {
+        color: $brand-primary;
+      }
+    }
+    ul {
+      li {
+        display: inline-block;
+        padding: 0rem 1.5rem;
+        &:last-child {
+          padding-right: 0rem;
+        }
+        a {
+          font-size: $main-size;
+          &.--active {
+            color: $brand-primary;
+          }
+        }
+      }
+    }
+  }
+}

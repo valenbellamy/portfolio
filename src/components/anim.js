@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import anime from "animejs/lib/anime.es.js"
 
-import "./styles/anim.scss"
-
 const Anim = () => {
   let svgRef = useRef(null)
 
@@ -46,7 +44,7 @@ const Anim = () => {
           ref={element => {
             svgRef = element
           }}
-          fill="#f2eeea"
+          fill="#000"
           d="M 100,0 L 100,100 C 100,100 100,100 50,100 C 0,100 0,100 0,100 L 0,0 Z"
         ></path>
       </svg>

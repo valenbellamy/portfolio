@@ -1,0 +1,98 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: $grey-light;
+  height: 220px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem 0rem;
+  @media (min-width: 767.98px) {
+    height: 30vh;
+    justify-content: center;
+    padding: 0rem;
+  }
+  @media (min-width: 991.98px) {
+    height: 45vh;
+  }
+  > div {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    @media (min-width: 767.98px) {
+      width: 90%;
+    }
+    h2,
+    .mail {
+      font-size: 1.8rem;
+      @media (min-width: 767.98px) {
+        font-size: 3rem;
+      }
+    }
+    &.footer__bottom {
+      margin-top: 4rem;
+      display: block;
+      @media (min-width: 767.98px) {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul {
+        margin-bottom: 1rem;
+        @media (min-width: 767.98px) {
+          margin-bottom: 0rem;
+        }
+        li {
+          display: inline-block;
+          padding: 0rem 1.5rem;
+          &:first-child {
+            padding-left: 0rem;
+          }
+          a {
+            font-size: $main-size;
+          }
+        }
+      }
+      span {
+        font-size: $main-size;
+      }
+    }
+    h2 {
+      .separator {
+        margin-left: -1rem;
+        animation: separator 0.7s step-end infinite;
+        -webkit-animation: separator 0.7s step-end infinite;
+      }
+      .word {
+        line-height: 1;
+        .letter {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@keyframes separator {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes separator {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
