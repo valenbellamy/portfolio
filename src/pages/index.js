@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import anime from "animejs/lib/anime.es.js"
@@ -8,18 +8,34 @@ import Anim from "../components/anim"
 import Project from "../components/project"
 
 const IndexPage = ({ data }) => {
+  const [loadingIndicator, setLoadingIndicator] = useState(false)
   let elRef = useRef(null)
   let elRef2 = useRef(null)
 
+  useEffect(() => {
+    setLoadingIndicator(localStorage.getItem("loader"))
+    if (loadingIndicator === null) {
+      playAnim()
+    } else {
+      const timer = setTimeout(() => {
+        localStorage.removeItem("loader")
+        playAnim()
+      }, 1000)
+      return () => clearTimeout(timer)
+    }
+  }, [loadingIndicator])
+
+  const playAnim = () => {
+    anime({
+      targets: ".--anim",
+      opacity: 1,
+      duration: 600,
+      easing: "easeInOutQuad",
+      delay: anime.stagger(100),
+    })
+  }
+
   const scrollFooter = () => {
-    // console.log("scroll")
-    // console.log(elRef.current.clientHeight)
-    // anime({
-    //   targets: window.scrollY,
-    //   y: elRef.current.clientHeight,
-    //   duration: 500,
-    //   easing: "easeInOutQuad",
-    // })
     window.scrollTo({
       top: elRef2.current.clientHeight + elRef.current.clientHeight,
       behavior: "smooth",
@@ -29,19 +45,19 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Valentin Bellamy, développeur frontend" />
-      {/* <Anim /> */}
+      <Anim />
       <section className="intro" ref={elRef2}>
         <div className="container">
           <div className="intro__content">
-            <h2 className="special__title mbs">bienvenue</h2>
-            <h1>
+            <h2 className="special__title mbs --anim">bienvenue</h2>
+            <h1 className="--anim">
               Développeur frontend en freelance, <span>passionné</span> par le
               web et très tatillon avec les <span>performances</span> de votre
               site !
             </h1>
             <div className="intro__action">
-              <span>Intéressé(e) ?</span>
-              <div className="btn btn--heart">
+              <span className="--anim">Intéressé(e) ?</span>
+              <div className="btn btn--heart --anim">
                 <button type="button" onClick={() => scrollFooter()}>
                   Contactez-moi alors !
                 </button>
@@ -65,7 +81,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <section className="projects" ref={elRef}>
+      <section className="projects --anim" ref={elRef}>
         <div className="container">
           <h2 className="special__title mbm">mes projets récents</h2>
           <Project

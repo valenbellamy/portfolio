@@ -8,9 +8,9 @@ header {
     }
     a {
       font-size: $main-size;
-      &.--active {
-        color: $brand-primary;
-      }
+      // &.--active {
+      //   color: $brand-primary;
+      // }
     }
     ul {
       li {
@@ -21,8 +21,13 @@ header {
         }
         a {
           font-size: $main-size;
+          color: $primary-text;
+          transition: all 0.3s ease;
           &.--active {
-            color: $brand-primary;
+            text-decoration: underline;
+          }
+          &:hover {
+            text-decoration: underline;
           }
         }
       }

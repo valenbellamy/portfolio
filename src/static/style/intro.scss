@@ -96,6 +96,10 @@
   }
 }
 
+.--anim {
+  opacity: 0;
+}
+
 @keyframes slide {
   0% {
     left: 50%;

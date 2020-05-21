@@ -1,10 +1,14 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import anime from "animejs/lib/anime.es.js"
 
 const Anim = () => {
   let svgRef = useRef(null)
+  const [display, setDisplay] = useState(true)
 
   useEffect(() => {
+    if (localStorage.getItem("loader") === null) {
+      setDisplay(false)
+    }
     anime
       .timeline()
       .add({
@@ -38,7 +42,7 @@ const Anim = () => {
     })
   }, [])
   return (
-    <div className="morph-intro">
+    <div className={`morph-intro ${display ? "" : "--hidden"}`}>
       <svg viewBox="0 0 100 100" preserveAspectRatio="none">
         <path
           ref={element => {

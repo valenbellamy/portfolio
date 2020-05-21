@@ -7,7 +7,7 @@ const Header = () => (
     <div className="container">
       <nav>
         <Link to="/" activeClassName="--active">
-          {"{ "}valentinBellamy{" }"}
+          valentinBellamy
         </Link>
         <ul>
           <li>
