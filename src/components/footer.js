@@ -8,12 +8,15 @@ const Footer = () => {
   const [isActive, setIsActive] = useState(true)
   const [count, setCount] = useState(0)
   const [setRef, visible] = useOnScreen({ threshold: 1 })
-  const [mobile, setMobile] = useState(
-    /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-  )
+  // const [mobile, setMobile] = useState(
+  //   /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  // )
 
   useEffect(() => {
     let interval = null
+    let mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+      ? /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+      : false
     let sequency = mobile ? Sequency.sequency2 : Sequency.sequency
     if (count <= sequency.length) {
       interval = setInterval(() => {
