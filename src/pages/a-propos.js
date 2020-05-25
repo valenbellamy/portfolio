@@ -78,6 +78,7 @@ const AproposPage = ({ data }) => {
           <Img
             fluid={data.img.childImageSharp.fluid}
             backgroundColor="#000000"
+            alt="Photo de Valentin Bellamy, développeur frontend"
           />
         </div>
       </section>

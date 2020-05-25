@@ -84,30 +84,36 @@ const IndexPage = ({ data }) => {
       <section className="projects --anim" ref={elRef}>
         <div className="container">
           <h2 className="special__title mbm">mes projets récents</h2>
-          <Project
-            img={data.img1.childImageSharp.fluid}
-            title="Studio Mitsu"
-            description="Développement et mise en place d'un CMS"
-            url="https://studiomitsu.com"
-          />
-          <Project
-            img={data.img2.childImageSharp.fluid}
-            title="Volta architecture"
-            description="Développement et mise en place d'un CMS"
-            url="https://volta-architecture.com"
-          />
-          <Project
-            img={data.img3.childImageSharp.fluid}
-            title="Studio +33"
-            description="Développement et mise en place d'un CMS"
-            url="https://plus33studio.com"
-          />
-          <Project
-            img={data.img4.childImageSharp.fluid}
-            title="Cactus et Lama"
-            description="Design, développement et mise en place d'un CMS"
-            url="https://cactus-et-lama.fr"
-          />
+          <div className="projects__grid">
+            <Project
+              img={data.img1.childImageSharp.fluid}
+              title="Studio Mitsu"
+              description="Développement et mise en place d'un CMS"
+              url="https://studiomitsu.com"
+              alt="Capture d'écran du site Studio Mitsu développé par Valentin Bellamy"
+            />
+            <Project
+              img={data.img3.childImageSharp.fluid}
+              title="Studio +33"
+              description="Développement et mise en place d'un CMS"
+              url="https://plus33studio.com"
+              alt="Capture d'écran du site Studio +33 développé par Valentin Bellamy"
+            />
+            <Project
+              img={data.img2.childImageSharp.fluid}
+              title="Volta architecture"
+              description="Développement et mise en place d'un CMS"
+              url="https://volta-architecture.com"
+              alt="Capture d'écran du site Volta Architecture développé par Valentin Bellamy"
+            />
+            <Project
+              img={data.img4.childImageSharp.fluid}
+              title="Cactus et Lama"
+              description="Design, développement et mise en place d'un CMS"
+              url="https://cactus-et-lama.fr"
+              alt="Capture d'écran du site Cactus et Lama développé par Valentin Bellamy"
+            />
+          </div>
         </div>
       </section>
     </Layout>
