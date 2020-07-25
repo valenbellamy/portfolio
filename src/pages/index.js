@@ -96,7 +96,7 @@ const IndexPage = ({ data }) => {
               img={data.img5.childImageSharp.fluid}
               title="Superstructure"
               description="Développement et mise en place d'un CMS"
-              url="https://superstruture.tv"
+              url="https://superstructure.tv"
               alt="Capture d'écran du site Superstructure développé par Valentin Bellamy"
             />
             <Project
