@@ -86,6 +86,20 @@ const IndexPage = ({ data }) => {
           <h2 className="special__title mbm">mes projets récents</h2>
           <div className="projects__grid">
             <Project
+              img={data.img6.childImageSharp.fluid}
+              title="Impact Mémoire"
+              description="Développement d'un thème Wordpress sur-mesure"
+              url="https://impactmemoire.com"
+              alt="Capture d'écran du site Impact Mémoire développé par Valentin Bellamy"
+            />
+            <Project
+              img={data.img5.childImageSharp.fluid}
+              title="Superstructure"
+              description="Développement et mise en place d'un CMS"
+              url="https://superstruture.tv"
+              alt="Capture d'écran du site Superstructure développé par Valentin Bellamy"
+            />
+            <Project
               img={data.img1.childImageSharp.fluid}
               title="Studio Mitsu"
               description="Développement et mise en place d'un CMS"
@@ -144,6 +158,20 @@ export const query = graphql`
       }
     }
     img4: file(relativePath: { eq: "photo-5-min.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    img5: file(relativePath: { eq: "superstructure-min.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    img6: file(relativePath: { eq: "impact-min.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
