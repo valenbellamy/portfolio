@@ -86,6 +86,20 @@ const IndexPage = ({ data }) => {
           <h2 className="special__title mbm">mes projets récents</h2>
           <div className="projects__grid">
             <Project
+              img={data.img7.childImageSharp.fluid}
+              title="Clément Karl"
+              description="Développement d'un site sur-mesure"
+              url="https://clementkarl.netlify.app"
+              alt="Capture d'écran du site de Clément Karl développé par Valentin Bellamy"
+            />
+            <Project
+              img={data.img8.childImageSharp.fluid}
+              title="Gustave les chantiers"
+              description="Développement et mise en place d'un CMS"
+              url="https://gustaveleschantiers.netlify.app"
+              alt="Capture d'écran du site Gustave les chantiers développé par Valentin Bellamy"
+            />
+            <Project
               img={data.img6.childImageSharp.fluid}
               title="Impact Mémoire"
               description="Développement d'un thème Wordpress sur-mesure"
@@ -172,6 +186,20 @@ export const query = graphql`
       }
     }
     img6: file(relativePath: { eq: "impact-min.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    img7: file(relativePath: { eq: "ck-min.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    img8: file(relativePath: { eq: "gustave-min.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
